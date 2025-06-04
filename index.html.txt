@@ -1,0 +1,245 @@
+{
+  "_index": "http-jaeger-span-2025-05-22",
+  "_type": "_doc",
+  "_id": "Q2wF-JYBKmKocnA3nsVA",
+  "_version": 1,
+  "_score": 1,
+  "_source": {
+    "traceID": "991b6110933ec061f7bd9f5cca8e1617",
+    "spanID": "a88ad2922a12545c",
+    "operationName": "GET /achievements",
+    "references": [],
+    "startTime": 1747917837008790,
+    "startTimeMillis": 1747917837008,
+    "duration": 35219,
+    "tags": [],
+    "tag": {
+      "body": "{\"status\": \"error\", \"message\": \"\\u041f\\u0440\\u043e\\u0438\\u0437\\u043e\\u0448\\u043b\\u0430 \\u043e\\u0448\\u0438\\u0431\\u043a\\u0430\"}",
+      "error": true,
+      "http@flavor": "1.0",
+      "http@host": "172.17.0.16:8007",
+      "http@method": "GET",
+      "http@route": "/achievements",
+      "http@scheme": "http",
+      "http@server_name": "stable_api_v2",
+      "http@status_code": 500,
+      "http@target": "/achievements",
+      "http@url": "http://172.17.0.16:8007/v2/achievements?status=100",
+      "http@user_agent": "PostmanRuntime/7.44.0",
+      "internal@span@format": "proto",
+      "net@host@port": 8007,
+      "net@peer@ip": "172.17.0.1",
+      "net@peer@port": 53114,
+      "otel@library@name": "opentelemetry.instrumentation.asgi",
+      "otel@library@version": "0.46b0",
+      "otel@status_code": "ERROR",
+      "span@kind": "server"
+    },
+    "logs": [
+      {
+        "timestamp": 1747917837035669,
+        "fields": [
+          {
+            "key": "event",
+            "type": "string",
+            "value": "exception"
+          },
+          {
+            "key": "exception.type",
+            "type": "string",
+            "value": "ZeroDivisionError"
+          },
+          {
+            "key": "exception.message",
+            "type": "string",
+            "value": "division by zero"
+          },
+          {
+            "key": "exception.stacktrace",
+            "type": "string",
+            "value": "Traceback (most recent call last):\n  File \"/app/resources/technical/technical_routes.py\", line 52, in achievements_get\n    division_by_zero = 1 / 0\n                       ~~^~~\nZeroDivisionError: division by zero\n"
+          },
+          {
+            "key": "exception.escaped",
+            "type": "string",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "process": {
+      "serviceName": "PokemonBattleAPI",
+      "tags": [],
+      "tag": {
+        "telemetry@sdk@language": "python",
+        "telemetry@sdk@name": "opentelemetry",
+        "telemetry@sdk@version": "1.25.0"
+      }
+    }
+  },
+  "fields": {
+    "traceID": [
+      "991b6110933ec061f7bd9f5cca8e1617"
+    ],
+    "startTimeMillis": [
+      "2025-05-22T12:43:57.008Z"
+    ],
+    "tag.body": [
+      "{\"status\": \"error\", \"message\": \"\\u041f\\u0440\\u043e\\u0438\\u0437\\u043e\\u0448\\u043b\\u0430 \\u043e\\u0448\\u0438\\u0431\\u043a\\u0430\"}"
+    ],
+    "tag.http@flavor": [
+      "1.0"
+    ],
+    "process.tag.telemetry@sdk@version": [
+      "1.25.0"
+    ],
+    "tag.http@user_agent": [
+      "PostmanRuntime/7.44.0"
+    ],
+    "tag.http@url": [
+      "http://172.17.0.16:8007/v2/achievements?status=100"
+    ],
+    "tag.error": [
+      "true"
+    ],
+    "tag.internal@span@format": [
+      "proto"
+    ],
+    "duration": [
+      35219
+    ],
+    "trace.id": [
+      "991b6110933ec061f7bd9f5cca8e1617"
+    ],
+    "process.tag.telemetry@sdk@language": [
+      "python"
+    ],
+    "startTime": [
+      1747917837008790
+    ],
+    "http.response.status_code": [
+      "500"
+    ],
+    "logs": [
+      {
+        "fields": [
+          {
+            "type": [
+              "string"
+            ],
+            "value": [
+              "exception"
+            ],
+            "key": [
+              "event"
+            ]
+          },
+          {
+            "type": [
+              "string"
+            ],
+            "value": [
+              "ZeroDivisionError"
+            ],
+            "key": [
+              "exception.type"
+            ]
+          },
+          {
+            "type": [
+              "string"
+            ],
+            "value": [
+              "division by zero"
+            ],
+            "key": [
+              "exception.message"
+            ]
+          },
+          {
+            "type": [
+              "string"
+            ],
+            "value": [
+              "Traceback (most recent call last):\n  File \"/app/resources/technical/technical_routes.py\", line 52, in achievements_get\n    division_by_zero = 1 / 0\n                       ~~^~~\nZeroDivisionError: division by zero\n"
+            ],
+            "key": [
+              "exception.stacktrace"
+            ]
+          },
+          {
+            "type": [
+              "string"
+            ],
+            "value": [
+              "False"
+            ],
+            "key": [
+              "exception.escaped"
+            ]
+          }
+        ],
+        "timestamp": [
+          1747917837035669
+        ]
+      }
+    ],
+    "tag.http@route": [
+      "/achievements"
+    ],
+    "tag.http@method": [
+      "GET"
+    ],
+    "tag.otel@library@version": [
+      "0.46b0"
+    ],
+    "tag.http@server_name": [
+      "stable_api_v2"
+    ],
+    "tag.http@status_code": [
+      "500"
+    ],
+    "tag.net@host@port": [
+      "8007"
+    ],
+    "operationName": [
+      "GET /achievements"
+    ],
+    "tag.otel@status_code": [
+      "ERROR"
+    ],
+    "tag.http@target": [
+      "/achievements"
+    ],
+    "tag.http@host": [
+      "172.17.0.16:8007"
+    ],
+    "spanID": [
+      "a88ad2922a12545c"
+    ],
+    "tag.net@peer@ip": [
+      "172.17.0.1"
+    ],
+    "url.path": [
+      "/achievements"
+    ],
+    "process.tag.telemetry@sdk@name": [
+      "opentelemetry"
+    ],
+    "process.serviceName": [
+      "PokemonBattleAPI"
+    ],
+    "tag.http@scheme": [
+      "http"
+    ],
+    "tag.net@peer@port": [
+      "53114"
+    ],
+    "tag.span@kind": [
+      "server"
+    ],
+    "tag.otel@library@name": [
+      "opentelemetry.instrumentation.asgi"
+    ]
+  }
+}
